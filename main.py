@@ -14,6 +14,7 @@ def main():
     load_dotenv(str(dotenv_path))
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")
+
     # Init driver
     driver_options = Options()
     driver_options.add_argument("--headless")
@@ -42,6 +43,7 @@ def main():
     except NoAlertPresentException as _:
         pass
 
+    # Save it
     driver.save_screenshot("success.png")
 
 
